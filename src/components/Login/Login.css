@@ -1,0 +1,41 @@
+.form_container {
+    width: 500px;
+    height: 600px;
+    margin: 20px auto;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 8px;
+}
+
+.form_title {
+    text-align: center;
+}
+
+.form_control {
+    padding-left: 40px;
+    margin: 30px 0px;
+}
+
+.form_control label {
+    display: block;
+}
+
+.form_container input {
+    width: 415px;
+    height: 55px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.btn_submit {
+    width: 415px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: rgb(247, 183, 63);
+
+}
+
+.btn_submit:hover {
+    background-color: orange;
+    color: white;
+}
