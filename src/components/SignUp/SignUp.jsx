@@ -32,7 +32,8 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                alert("User created successful")
+                alert("User created successful");
+                form.reset();
             })
             .catch(error => {
                 console.log(error)
