@@ -9,11 +9,14 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
 
-
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
 
     const user = { displayName: "Farid" }
     const authInfo = {
         user,
+        createUser,
     }
     return (
         <AuthContext.Provider value={authInfo}>

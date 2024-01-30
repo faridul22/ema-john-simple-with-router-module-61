@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './SignUp.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const SignUp = () => {
+
+    const { createUser } = useContext(AuthContext);
 
     const [error, setError] = useState(null)
 
@@ -23,7 +26,16 @@ const SignUp = () => {
             setError("Your password must be 6 characters");
             return
         }
-        console.log(email, password, confirm)
+        console.log(email, password, confirm);
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
