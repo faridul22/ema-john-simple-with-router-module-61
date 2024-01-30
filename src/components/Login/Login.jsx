@@ -5,13 +5,29 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
 
-    const { user, } = useContext(AuthContext);
-    console.log(user)
+    const { signIn } = useContext(AuthContext);
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                alert("User login successful")
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
     return (
         <div className='form_container'>
             <h2 className='form_title'>Login</h2>
-            <form>
+            <form onSubmit={handleLogin}>
                 <div className="form_control">
                     <label htmlFor="">Email</label>
                     <input type="email" name="email" id="" required />
