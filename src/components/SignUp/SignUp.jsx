@@ -3,8 +3,25 @@ import './SignUp.css'
 
 const SignUp = () => {
     return (
-        <div>
-            <h3>This is sign up page</h3>
+        <div className='form_container'>
+            <h2 className='form_title'>SignUp</h2>
+            <form>
+                <div className="form_control">
+                    <label htmlFor="">Email</label>
+                    <input type="email" name="email" id="" required />
+                </div>
+                <div className="form_control">
+                    <label htmlFor="">Password</label>
+                    <input type="password" name="password" id="" required />
+                </div>
+                <div className="form_control">
+                    <label htmlFor="">Confirm Password</label>
+                    <input type="password" name="password" id="" required />
+                </div>
+                <div className='form_control'>
+                    <input className='btn_submit' type="submit" value="SignUp" />
+                </div>
+            </form>
         </div>
     );
 };

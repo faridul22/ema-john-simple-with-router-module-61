@@ -24,14 +24,11 @@
     height: 55px;
     font-size: 1.2rem;
     border-radius: 8px;
-    padding-left: 10px;
 }
 
 .btn_submit {
-    width: 415px;
-    height: 55px;
-    border-radius: 8px;
     background-color: rgb(247, 183, 63);
+    border: none;
 
 }
 
