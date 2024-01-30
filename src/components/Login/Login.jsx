@@ -20,7 +20,7 @@ const Login = () => {
                 </div>
             </form>
             <p className='signUp_login_toggle'>
-                <small>Already have an account <Link to="/signUp">Login</Link>
+                <small>New to Ema John <Link to="/signUp">Create new account</Link>
                 </small>
             </p>
         </div>
